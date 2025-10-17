@@ -12,11 +12,9 @@ public class Horario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
     private int peluqueria_id;
     private int hora_apertura;
     private int hora_cierre;
     private String dia_semana;
-
 
 }

@@ -11,7 +11,6 @@ public class ServicioPelu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
     private int peluqueria_id;
     private int servicio_id;
     private int precio;

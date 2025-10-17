@@ -12,6 +12,6 @@ public interface PeluqueriaService {
 
     Peluqueria createPeluqueria(Peluqueria peluqueria);
 
-    void deleteCliente(Integer id);
+    void deletePeluqueria(Integer id);
 
 }

@@ -11,7 +11,6 @@ public class ReservaCliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
     private int cliente_id;
     private int reserva_id;
 

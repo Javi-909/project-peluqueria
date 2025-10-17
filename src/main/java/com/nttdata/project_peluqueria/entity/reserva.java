@@ -11,7 +11,6 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
     private Date fecha;
     private Time hora;
     private Enum estado; //Pendiente, Confirmada, Cancelada
