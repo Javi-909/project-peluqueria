@@ -23,7 +23,7 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
     public List<PeluqueriaDto> findAll() {
         List<Peluqueria> peluqueria = peluqueriaRepository.findAll();
         return peluqueria.stream()
-                .map(clienteMapper::toDto)
+                .map(peluqueriaMapper::toDto)
                 .collect(Collectors.toList());
     }
 
@@ -40,7 +40,7 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
         for(i = 0; i < peluquerias.size(); i++)
             if(peluquerias[i].id == id) {
                 return peluquerias[i].stream() //se devuelve el cliente con id pasado por parametro
-                        .map(clienteMapper::toDto)
+                        .map(peluqueriaMapper::toDto)
                         .collect(Collectors.toList());
             }
         return System.out.print("No existe dicha peluqueria");

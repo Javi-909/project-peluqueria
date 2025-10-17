@@ -1,6 +1,8 @@
 package com.nttdata.project_peluqueria.service;
+import com.crude.crude.entity.Cliente;
+import org.springframework.stereotype.Service;
 
-
+import java.util.List;
 
 
 @Service
