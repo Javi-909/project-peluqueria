@@ -14,7 +14,7 @@ public interface PeluqueriaService {
 
     ResponseEntity<Peluqueria> mostrarPeluqueriaPorId(Integer id);
 
-    Peluqueria createPeluqueria(Peluqueria peluqueria);
+    Peluqueria createPeluqueria(PeluqueriaDto peluqueriaDto);
 
     void deletePeluqueria(Integer id);
 

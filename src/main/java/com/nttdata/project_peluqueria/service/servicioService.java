@@ -9,9 +9,9 @@ public interface ServicioService {
 
     List<Servicio> findAll();
 
-    ResponseEntity<Servicio> mostrarServicioPorId(Integer id);
+    ResponseEntity<ServicioDto> mostrarServicioPorId(Integer id);
 
-    Servicio createServicio(Servicio servicio);
+    Servicio createServicio(ServicioDto servicioDto);
 
     void deleteServicio(Integer id);
 

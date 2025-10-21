@@ -35,7 +35,7 @@ public class ServicioServiceImpl implements ServicioService {
         return servicio;
     }
     @Override
-    public ResponseEntity<Servicio> mostrarServicioPorId(Integer id) {
+    public ResponseEntity<ServicioDto> mostrarServicioPorId(Integer id) {
         List<Servicio> servicios = servicioRepository.findAll();
         return servicios.stream().map(servicioMapper::toDto).collect(Collectors.toList())
             }

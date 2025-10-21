@@ -29,13 +29,13 @@ public class ClienteServiceImpl implements ClienteService {
 
 
     @Override
-    public Cliente createCliente(ClienteDto clienteDto) {
+    public ClienteDto createCliente(ClienteDto clienteDto) {
         Cliente cliente = clienteMapper.toEntity(clienteDto);
         clienteRepository.save(cliente);
         return cliente;
     }
     @Override
-    public ResponseEntity<Cliente> mostrarClientePorId(Integer id) {
+    public ResponseEntity<ClienteDto> mostrarClientePorId(Integer id) {
         List<Cliente> clientes = clienteRepository.findAll();
         return clientes.stream().map(clienteMapper::toDto).collect(Collectors.toList())
           }

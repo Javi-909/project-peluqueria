@@ -26,7 +26,7 @@ public class ClienteController {
     }
 
     @PostMapping("/create")
-    public Cliente createCliente(@RequestBody Cliente cliente) {
+    public Cliente createCliente(@RequestBody ClienteDto clienteDto) {
         return clienteService.createCliente(cliente);
     }
 

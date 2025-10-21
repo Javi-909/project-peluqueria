@@ -27,7 +27,7 @@ public class ServicioController {
     }
 
     @PostMapping("/create")
-    public Cliente createServicio(@RequestBody Servicio servicio) {
+    public Cliente createServicio(@RequestBody ServicioDto servicioDto) {
         return servicioService.createServicio(servicio);
     }
 

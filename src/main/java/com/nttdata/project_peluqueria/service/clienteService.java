@@ -12,7 +12,7 @@ public interface ClienteService {
 
     ResponseEntity<Cliente> mostrarClientePorId(Integer id);
 
-    Cliente createCliente(Cliente cliente);
+    Cliente createCliente(ClienteDto clienteDto);
 
     void deleteCliente(Integer id);
 
