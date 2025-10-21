@@ -39,7 +39,7 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
         List<Peluqueria> peluquerias = peluqueriaRepository.findAll();
         for(i = 0; i < peluquerias.size(); i++)
             if(peluquerias[i].id == id) {
-                return peluquerias[i].stream() //se devuelve el cliente con id pasado por parametro
+                return peluquerias[i].stream() //se devuelve la peluqueria con id pasado por parametro
                         .map(peluqueriaMapper::toDto)
                         .collect(Collectors.toList());
             }
