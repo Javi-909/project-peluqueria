@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface peluqueriaRepository extends JpaRepository<Peluqueria, String>{
 
+    //hacer métodos save(peluqueria), findAll(), deleteById(id)
+
 }
