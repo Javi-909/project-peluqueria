@@ -17,17 +17,17 @@ public class PeluqueriaController {
     private PeluqueriaService peluqueriaService;
 
     @GetMapping("/findAll")
-    public List<Peluqueria> findAll() {  //creo que deberia ser List<PeluqueriaDto> findAll()
-        return peluqueriaService.findAll();
+    public List<PeluqueriaDto> findAll() {
+        return peluqueriaService.findAll(); //esto devuelve la lista de peluqueriaDto
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Peluqueria> mostrarPeluqueriaPorId(@PathVariable Long id){
+    public ResponseEntity<PeluqueriaDto> mostrarPeluqueriaPorId(@PathVariable Long id){
         return peluqueriaService.mostrarPeluqueriaPorId(id);
     }
 
     @PostMapping("/create")
-    public Peluqueria createPeluqueria(@RequestBody Peluqueria peluqueria) {
+    public PeluqueriaDto createPeluqueria(@RequestBody Peluqueria peluqueria) {
         return peluqueriaService.createPeluqueria(peluqueria);
     }
 

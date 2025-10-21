@@ -29,13 +29,13 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
 
 
     @Override
-    public Peluqueria createPeluqueria(PeluqueriaDto peluqueriaDto) {
+    public PeluqueriaDto createPeluqueria(PeluqueriaDto peluqueriaDto) {
         Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
         peluqueriaRepository.save(peluqueria);
         return peluqueria;
     }
     @Override
-    public ResponseEntity<Peluqueria> mostrarPeluqueriaPorId(Integer id) {
+    public ResponseEntity<PeluqueriaDto> mostrarPeluqueriaPorId(Integer id) {
         List<Peluqueria> peluquerias = peluqueriaRepository.findAll();
         return peluquerias.stream().map(peluqueriaMapper::toDto).collect(Collectors.toList())
             }
