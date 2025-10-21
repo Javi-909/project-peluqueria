@@ -30,9 +30,9 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
 
     @Override
     public PeluqueriaDto createPeluqueria(PeluqueriaDto peluqueriaDto) {
-        Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
-        peluqueriaRepository.save(peluqueria);
-        return peluqueria;
+        //Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
+        peluqueriaRepository.save(peluqueriaDto);
+        return peluqueriaDto;
     }
     @Override
     public ResponseEntity<PeluqueriaDto> mostrarPeluqueriaPorId(Integer id) {

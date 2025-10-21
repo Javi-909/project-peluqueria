@@ -29,10 +29,10 @@ public class ServicioServiceImpl implements ServicioService {
 
 
     @Override
-    public Servicio createServicio(ServicioDto servicioDto) {
-        Servicio servicio = servicioMapper.toEntity(servicioDto);
-        servicioRepository.save(servicio);
-        return servicio;
+    public ServicioDto createServicio(ServicioDto servicioDto) {
+       // Servicio servicio = servicioMapper.toEntity(servicioDto);
+        servicioRepository.save(servicioDto);
+        return servicioDto;
     }
     @Override
     public ResponseEntity<ServicioDto> mostrarServicioPorId(Integer id) {
