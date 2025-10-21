@@ -2,7 +2,7 @@ package com.nttdata.project_peluqueria.service;
 
 import com.nttdata.project_peluqueria.dto.PeluqueriaDto;
 import com.nttdata.project_peluqueria.entity.Peluqueria;
-import com.nttdata.project_peluqueria.mapper.PeluqueriaMapper; //hacer
+import com.nttdata.project_peluqueria.mapper.PeluqueriaMapper;
 import com.nttdata.project_peluqueria.repository.PeluqueriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

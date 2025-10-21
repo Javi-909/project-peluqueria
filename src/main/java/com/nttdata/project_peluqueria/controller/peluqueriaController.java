@@ -11,13 +11,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/peluqueria")
-public class peluqueriaController {
+public class PeluqueriaController {
 
     @Autowired
     private PeluqueriaService peluqueriaService;
 
     @GetMapping("/findAll")
-    public List<Peluqueria> findAll() {
+    public List<Peluqueria> findAll() {  //creo que deberia ser List<PeluqueriaDto> findAll()
         return peluqueriaService.findAll();
     }
 
