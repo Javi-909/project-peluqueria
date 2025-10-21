@@ -13,8 +13,8 @@ public class Horario {
 
     private Long id;
     private int peluqueria_id;
-    private int hora_apertura;
-    private int hora_cierre;
+    private Time hora_apertura;
+    private Time hora_cierre;
     private String dia_semana;
 
 }
