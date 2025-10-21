@@ -1,5 +1,13 @@
 package com.nttdata.project_peluqueria.controller;
 
+import com.nttdata.project_peluqueria.dto.peluqueriaDto;
+import com.nttdata.project_peluqueria.service.peluqueriaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/peluqueria")
