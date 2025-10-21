@@ -30,18 +30,14 @@ public class ServicioServiceImpl implements ServicioService {
 
     @Override
     public Servicio createServicio(ServicioDto servicioDto) {
-        Servicio servicio = ServicioMapper.mapper.toEntity(servicioDto);
+        Servicio servicio = servicioMapper.toEntity(servicioDto);
         servicioRepository.save(servicio);
         return servicio;
     }
     @Override
     public ResponseEntity<Servicio> mostrarServicioPorId(Integer id) {
         List<Servicio> servicios = servicioRepository.findAll();
-        for(i = 0; i < servicios.size(); i++)
-            if(servicios[i].id == id) {
-                return servicios[i].stream() //se devuelve el servicio con id pasado por parametro
-                        .map(servicioMapper::toDto)
-                        .collect(Collectors.toList());
+        return servicios.stream().map(servicioMapper::toDto).collect(Collectors.toList())
             }
         return System.out.print("No existe dicho servicio");
     }

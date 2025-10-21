@@ -30,18 +30,14 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente createCliente(ClienteDto clienteDto) {
-        Cliente cliente = ClienteMapper.mapper.toEntity(clienteDto);
+        Cliente cliente = clienteMapper.toEntity(clienteDto);
         clienteRepository.save(cliente);
         return cliente;
     }
     @Override
     public ResponseEntity<Cliente> mostrarClientePorId(Integer id) {
         List<Cliente> clientes = clienteRepository.findAll();
-        for(i = 0; i < clientes.size(); i++)
-          if(clientes[i].id == id) {
-              return clientes[i].stream() //se devuelve el cliente con id pasado por parametro
-                      .map(clienteMapper::toDto)
-                      .collect(Collectors.toList());
+        return clientes.stream().map(clienteMapper::toDto).collect(Collectors.toList())
           }
         return System.out.print("No existe dicho cliente");
     }

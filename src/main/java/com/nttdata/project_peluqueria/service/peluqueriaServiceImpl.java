@@ -30,18 +30,14 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
 
     @Override
     public Peluqueria createPeluqueria(PeluqueriaDto peluqueriaDto) {
-        Peluqueria peluqueria = PeluqueriaMapper.mapper.toEntity(peluqueriaDto);
+        Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
         peluqueriaRepository.save(peluqueria);
         return peluqueria;
     }
     @Override
     public ResponseEntity<Peluqueria> mostrarPeluqueriaPorId(Integer id) {
         List<Peluqueria> peluquerias = peluqueriaRepository.findAll();
-        for(i = 0; i < peluquerias.size(); i++)
-            if(peluquerias[i].id == id) {
-                return peluquerias[i].stream() //se devuelve la peluqueria con id pasado por parametro
-                        .map(peluqueriaMapper::toDto)
-                        .collect(Collectors.toList());
+        return peluquerias.stream().map(peluqueriaMapper::toDto).collect(Collectors.toList())
             }
         return System.out.print("No existe dicha peluqueria");
     }
