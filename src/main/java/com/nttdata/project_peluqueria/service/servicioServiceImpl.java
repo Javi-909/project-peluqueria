@@ -39,7 +39,7 @@ public class ServicioServiceImpl implements ServicioService {
         List<Servicio> servicios = servicioRepository.findAll();
         for(i = 0; i < servicios.size(); i++)
             if(servicios[i].id == id) {
-                return servicios[i].stream() //se devuelve el cliente con id pasado por parametro
+                return servicios[i].stream() //se devuelve el servicio con id pasado por parametro
                         .map(servicioMapper::toDto)
                         .collect(Collectors.toList());
             }

@@ -1,7 +1,7 @@
 package com.nttdata.project_peluqueria.mapper;
 
-import com.nttdata.project_peluqueria.dto.horarioDto;
-import com.nttdata.project_peluqueria.entity.horario;
+import com.nttdata.project_peluqueria.dto.HorarioDto;
+import com.nttdata.project_peluqueria.entity.Horario;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

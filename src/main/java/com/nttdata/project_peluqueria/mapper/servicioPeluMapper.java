@@ -1,7 +1,7 @@
 package com.nttdata.project_peluqueria.mapper;
 
-import com.nttdata.project_peluqueria.dto.servicioPeluDto;
-import com.nttdata.project_peluqueria.entity.servicioPelu;
+import com.nttdata.project_peluqueria.dto.ServicioPeluDto;
+import com.nttdata.project_peluqueria.entity.ServicioPelu;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

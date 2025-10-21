@@ -1,5 +1,5 @@
 package com.nttdata.project_peluqueria.service;
-import com.crude.crude.entity.Peluqueria;
+import com.nttdata.project_peluqueria.entity.Peluqueria;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

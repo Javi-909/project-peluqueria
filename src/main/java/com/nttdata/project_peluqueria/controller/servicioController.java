@@ -1,7 +1,7 @@
 package com.nttdata.project_peluqueria.controller;
 
-import com.nttdata.project_peluqueria.dto.servicioDto;
-import com.nttdata.project_peluqueria.service.servicioService;
+import com.nttdata.project_peluqueria.dto.ServicioDto;
+import com.nttdata.project_peluqueria.service.ServicioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
