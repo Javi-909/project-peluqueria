@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface HorarioMapper {
 
-    HorarioMapper mapper = Mappers.getMapper(HorarioMapper.class);
+    //HorarioMapper mapper = Mappers.getMapper(HorarioMapper.class);
 
     HorarioDto toDto(Horario horario);
     Horario toEntity(HorarioDto horarioDto);

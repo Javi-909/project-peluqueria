@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ReservaMapper {
 
-    ReservaMapper mapper = Mappers.getMapper(ReservaMapper.class);
+    //ReservaMapper mapper = Mappers.getMapper(ReservaMapper.class);
 
     ReservaDto toDto(Reserva reserva);
     Reserva toEntity(ReservaDto reservaDto);

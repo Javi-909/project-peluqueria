@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ServicioMapper {
 
-    ServicioMapper mapper = Mappers.getMapper(ServicioMapper.class);
+    //ServicioMapper mapper = Mappers.getMapper(ServicioMapper.class);
 
     ServicioDto toDto(Servicio servicio);
     Servicio toEntity(ServicioDto servicioDto);

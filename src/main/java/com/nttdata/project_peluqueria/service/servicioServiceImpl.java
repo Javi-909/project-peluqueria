@@ -27,13 +27,13 @@ public class ServicioServiceImpl implements ServicioService {
                 .collect(Collectors.toList());
     }
 
-
     @Override
     public ServicioDto createServicio(ServicioDto servicioDto) {
-       // Servicio servicio = servicioMapper.toEntity(servicioDto);
-        servicioRepository.save(servicioDto);
-        return servicioDto;
+        Servicio servicio = servicioMapper.toEntity(servicioDto);
+        Servicio saved = servicioRepository.save(servicio);
+        return servicioMapper.toDto(saved);
     }
+
     @Override
     public ResponseEntity<ServicioDto> mostrarServicioPorId(Integer id) {
         List<Servicio> servicios = servicioRepository.findAll();

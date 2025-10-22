@@ -30,9 +30,9 @@ public class PeluqueriaServiceImpl implements PeluqueriaService {
 
     @Override
     public PeluqueriaDto createPeluqueria(PeluqueriaDto peluqueriaDto) {
-        //Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
-        peluqueriaRepository.save(peluqueriaDto);
-        return peluqueriaDto;
+        Peluqueria peluqueria = peluqueriaMapper.toEntity(peluqueriaDto);
+        Peluqueria saved = peluqueriaRepository.save(peluqueria); //con el metodo save, solo puedo guardar entitys (pq es base de datos)
+        return peluqueriaMapper.toDto(saved);
     }
     @Override
     public ResponseEntity<PeluqueriaDto> mostrarPeluqueriaPorId(Integer id) {

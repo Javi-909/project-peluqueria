@@ -28,7 +28,7 @@ public class PeluqueriaController {
 
     @PostMapping("/create")
     public PeluqueriaDto createPeluqueria(@RequestBody PeluqueriaDto peluqueriaDto) {
-        return peluqueriaService.createPeluqueria(peluqueria);
+        return peluqueriaService.createPeluqueria(peluqueriaDto);
     }
 
     @DeleteMapping("/delete")

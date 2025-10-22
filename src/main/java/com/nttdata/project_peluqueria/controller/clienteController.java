@@ -17,17 +17,17 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping("/findAll")
-    public List<Cliente> findAll() {
+    public List<ClienteDto> findAll() {
         return clienteService.findAll();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Cliente> mostrarClientePorId(@PathVariable Long id){
+    public ResponseEntity<ClienteDto> mostrarClientePorId(@PathVariable Long id){
         return clienteService.mostrarClientePorId(id);
     }
 
     @PostMapping("/create")
-    public Cliente createCliente(@RequestBody ClienteDto clienteDto) {
-        return clienteService.createCliente(cliente);
+    public ClienteDto createCliente(@RequestBody ClienteDto clienteDto) {
+        return clienteService.createCliente(clienteDto);
     }
 
     @DeleteMapping("/delete")

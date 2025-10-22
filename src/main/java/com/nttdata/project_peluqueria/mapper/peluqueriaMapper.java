@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface PeluqueriaMapper {
 
-    PeluqueriaMapper mapper = Mappers.getMapper(PeluqueriaMapper.class);
+    //PeluqueriaMapper mapper = Mappers.getMapper(PeluqueriaMapper.class);
 
     PeluqueriaDto toDto(Peluqueria peluqueria);
     Peluqueria toEntity(PeluqueriaDto peluqueriaDto);

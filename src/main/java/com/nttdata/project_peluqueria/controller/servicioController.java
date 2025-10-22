@@ -18,17 +18,17 @@ public class ServicioController {
     private ServicioService servicioService;
 
     @GetMapping("/findAll")
-    public List<Servicio> findAll() {
+    public List<ServicioDto> findAll() {
         return servicioService.findAll();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Servicio> mostrarServicioPorId(@PathVariable Long id){
+    public ResponseEntity<ServicioDto> mostrarServicioPorId(@PathVariable Long id){
         return servicioService.mostrarServicioPorId(id);
     }
 
     @PostMapping("/create")
-    public Cliente createServicio(@RequestBody ServicioDto servicioDto) {
-        return servicioService.createServicio(servicio);
+    public ServicioDto createServicio(@RequestBody ServicioDto servicioDto) {
+        return servicioService.createServicio(servicioDto);
     }
 
     @DeleteMapping("/delete")
